@@ -38,14 +38,14 @@ const Auth = () => {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100 pt-16">
-      <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-8">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
+    <div className="flex min-h-screen items-center justify-center bg-gray-100 pt-16 px-4">
+      <div className="w-full max-w-md bg-white shadow-lg rounded-lg p-6 sm:p-8">
+        <h2 className="text-xl sm:text-2xl font-bold text-center text-gray-800 mb-4 sm:mb-6">
           Welcome Back 👋
         </h2>
 
-        <div className="bg-blue-50 border border-blue-200 text-blue-800 p-4 rounded-md mb-6">
-          <p className="text-sm">
+        <div className="bg-blue-50 border border-blue-200 text-blue-800 p-3 sm:p-4 rounded-md mb-4 sm:mb-6 text-xs sm:text-sm">
+          <p>
             <strong>Demo Credentials:</strong><br />
             Email: test@example.com<br />
             Password: password
@@ -54,25 +54,25 @@ const Auth = () => {
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-gray-700 font-medium">Email</label>
+            <label className="block text-gray-700 font-medium text-sm sm:text-base">Email</label>
             <input
               type="email"
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 text-sm sm:text-base mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
 
           <div>
-            <label className="block text-gray-700 font-medium">Password</label>
+            <label className="block text-gray-700 font-medium text-sm sm:text-base">Password</label>
             <input
               type="password"
               placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full px-3 py-2 text-sm sm:text-base mt-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
@@ -80,11 +80,11 @@ const Auth = () => {
           <button
             type="submit"
             disabled={isLoading}
-            className={`w-full ${isLoading ? 'bg-blue-400' : 'bg-blue-600 hover:bg-blue-700'} text-white py-2 rounded-lg font-semibold transition flex justify-center items-center`}
+            className={`w-full ${isLoading ? 'bg-blue-400' : 'bg-blue-600 hover:bg-blue-700'} text-white py-2 rounded-lg font-semibold transition flex justify-center items-center text-sm sm:text-base`}
           >
             {isLoading ? (
               <>
-                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <svg className="animate-spin -ml-1 mr-2 h-4 w-4 sm:h-5 sm:w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                   <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
@@ -96,8 +96,8 @@ const Auth = () => {
           </button>
         </form>
 
-        <div className="mt-6 border-t border-gray-200 pt-4">
-          <p className="text-center text-gray-600 text-sm">
+        <div className="mt-4 sm:mt-6 border-t border-gray-200 pt-4">
+          <p className="text-center text-gray-600 text-xs sm:text-sm">
             By logging in, you agree to our Terms of Service and Privacy Policy.
           </p>
         </div>

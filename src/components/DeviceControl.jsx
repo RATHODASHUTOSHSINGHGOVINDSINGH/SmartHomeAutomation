@@ -8,7 +8,6 @@ const DeviceControl = () => {
     { id: 3, name: "TV", status: "off", icon: <FaTv /> },
   ]);
  
-
   const toggleDevice = (id) => {
     setDevices((prevDevices) =>
       prevDevices.map((device) =>
@@ -20,22 +19,24 @@ const DeviceControl = () => {
   };
 
   return (
-    <div className="p-6 bg-white shadow-xl rounded-xl border border-gray-200 transition-all duration-300 hover:shadow-2xl w-full">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">🔌 Device Control</h2>
+    <div className="p-4 bg-white shadow-xl rounded-xl border border-gray-200 transition-all duration-300 hover:shadow-2xl h-full">
+      <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+        <span className="text-xl mr-2">🔌</span> Device Control
+      </h2>
 
-      <ul>
+      <ul className="space-y-3">
         {devices.map((device) => (
           <li
             key={device.id}
-            className={`flex items-center justify-between p-4 rounded-lg shadow-md mb-3 transition ${
+            className={`flex items-center justify-between p-3 sm:p-4 rounded-lg shadow-md transition ${
               device.status === "on" ? "bg-green-100" : "bg-gray-100"
             }`}
           >
-            <div className="flex items-center gap-3 text-lg">
-              <span className={`text-2xl ${device.status === "on" ? "text-green-500" : "text-gray-500"}`}>
+            <div className="flex items-center gap-2 sm:gap-3">
+              <span className={`text-lg sm:text-2xl ${device.status === "on" ? "text-green-500" : "text-gray-500"}`}>
                 {device.icon}
               </span>
-              <span className="font-medium">
+              <span className="font-medium text-sm sm:text-base">
                 {device.name}:{" "}
                 <span className={device.status === "on" ? "text-green-600 font-bold" : "text-gray-500"}>
                   {device.status}
@@ -44,12 +45,11 @@ const DeviceControl = () => {
             </div>
             <button
               onClick={() => toggleDevice(device.id)}
-              className="p-3 rounded-full bg-gray-300 hover:bg-gray-400 transition duration-300"
+              className="p-2 sm:p-3 rounded-full bg-gray-300 hover:bg-gray-400 transition duration-300"
+              aria-label={`Toggle ${device.name}`}
             >
-              <FaPowerOff className={device.status === "on" ? "text-red-500" : "text-green-500"} />
-              
+              <FaPowerOff className={`text-sm sm:text-base ${device.status === "on" ? "text-red-500" : "text-green-500"}`} />
             </button>
-            
           </li>
         ))}
       </ul>
