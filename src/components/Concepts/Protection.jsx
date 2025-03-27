@@ -1,12 +1,13 @@
 import React from 'react'
+import ImageWithFallback from '../ImageErrorBoundary'
 
 function Protection() {
   return (
-    <div className="bg-white text-gray-800">
+    <div className="bg-white text-gray-800 pt-16">
     {/* Hero Section */}
     <section
       className="relative flex items-center justify-center h-[60vh] md:h-[80vh] bg-center bg-cover bg-no-repeat"
-      style={{ backgroundImage: 'url("/public/images/home2.jpg")' }}
+      style={{ backgroundImage: 'url("/concepts/images.jpg")' }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-30"></div>
       <div className="relative z-10 text-center max-w-3xl px-4">
@@ -39,9 +40,9 @@ function Protection() {
 
           {/* Image */}
           <div className="flex justify-center md:justify-end">
-            <img
-              src="/public/concepts/pro1.jpg"
-              alt="Perfect Mood"
+            <ImageWithFallback
+              src="/concepts/pro1.jpg"
+              alt="Protection Sensors"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
           </div>
@@ -52,9 +53,9 @@ function Protection() {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Image */}
           <div className="flex justify-center">
-            <img
-              src="/public/concepts/pro2.jpg"
-              alt="Plug and Play Setup"
+            <ImageWithFallback
+              src="/concepts/pro2.jpg"
+              alt="Smoke and Temperature Sensing"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
           </div>
@@ -85,31 +86,27 @@ function Protection() {
             </p>
             <p className="leading-relaxed">
             Also the entire enclosure is waterproof and so it is difficult for the sensor to submerge and it will float over the water so that it keeps sending signal to the main controller.
-
-
             </p>
           </div>
 
           {/* Image */}
           <div className="flex justify-center md:justify-end">
-            <img
-              src="/public/concepts/pro3.jpg"
-              alt="Perfect Mood"
+            <ImageWithFallback
+              src="/concepts/pro3.jpg"
+              alt="Flood Protection"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
           </div>
         </div>
       </section>
 
-
-      
-    <section className="bg-white-800 text-black py-16">
+      <section className="bg-white-800 text-black py-16">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Image */}
           <div className="flex justify-center">
-            <img
-              src="/public/concepts/pro4.jpg"
-              alt="Plug and Play Setup"
+            <ImageWithFallback
+              src="/concepts/pro4.jpg"
+              alt="Device Configuration"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
           </div>

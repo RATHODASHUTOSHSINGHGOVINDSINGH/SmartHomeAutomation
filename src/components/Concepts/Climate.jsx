@@ -1,12 +1,13 @@
 import React from 'react'
+import ImageWithFallback from '../ImageErrorBoundary'
 
 function Climate() {
   return (
-    <div className="bg-white text-gray-800">
+    <div className="bg-white text-gray-800 pt-16">
       {/* Hero Section */}
       <section
         className="relative flex items-center justify-center h-[60vh] md:h-[80vh] bg-center bg-cover bg-no-repeat"
-        style={{ backgroundImage: 'url("/public/concepts/climate.jpg")' }}
+        style={{ backgroundImage: 'url("/concepts/climate.jpg")' }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative z-10 text-center max-w-2xl mx-auto px-4">
@@ -55,23 +56,23 @@ function Climate() {
 
           {/* Image */}
           <div className="flex justify-center md:justify-end">
-            <img
-              src="/public/concepts/climate1.jpg"
-              alt="Ambient lighting"
+            <ImageWithFallback
+              src="/concepts/climate1.jpg"
+              alt="Smart Climate Control"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
           </div>
         </div>
       </section>
 
-          {/* Control from Smartphone */}
-          <section className="bg-white-800 text-black py-16">
+      {/* Control from Smartphone */}
+      <section className="bg-white-800 text-black py-16">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Image */}
           <div className="flex justify-center">
-            <img
-              src="/public/concepts/climate2.jpg"
-              alt="Plug and Play Setup"
+            <ImageWithFallback
+              src="/concepts/climate2.jpg"
+              alt="Smartphone Climate Control"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
           </div>
@@ -89,7 +90,6 @@ function Climate() {
         </div>
       </section>
       
-
       {/* Create the Perfect Mood Section (Dark Background) */}
       <section className="bg-white-800 text-black py-16">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -106,15 +106,14 @@ function Climate() {
 
           {/* Image */}
           <div className="flex justify-center md:justify-end">
-            <img
-              src="/public/concepts/climate3.jpg"
-              alt="Perfect Mood"
+            <ImageWithFallback
+              src="/concepts/climate3.jpg"
+              alt="Usage Patterns"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
           </div>
         </div>
       </section>
-
     </div>
   )
 }

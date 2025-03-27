@@ -1,12 +1,13 @@
 import React from 'react'
+import ImageWithFallback from '../ImageErrorBoundary'
 
 function Survillance() {
   return (
-    <div className="bg-white text-gray-800">
+    <div className="bg-white text-gray-800 pt-16">
       {/* Hero Section */}
       <section
         className="relative flex items-center justify-center h-[60vh] md:h-[80vh] bg-center bg-cover bg-no-repeat"
-        style={{ backgroundImage: 'url("/public/concepts/surve1.jpg")' }}
+        style={{ backgroundImage: 'url("/concepts/surve1.jpg")' }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative z-10 text-center max-w-2xl mx-auto px-4">
@@ -56,9 +57,9 @@ function Survillance() {
 
           {/* Image */}
           <div className="flex justify-center md:justify-end">
-            <img
-              src="/public/concepts/surve2.jpg"
-              alt="Ambient lighting"
+            <ImageWithFallback
+              src="/concepts/surve2.jpg"
+              alt="Surveillance Camera"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
           </div>
@@ -112,9 +113,9 @@ function Survillance() {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Image */}
           <div className="flex justify-center">
-            <img
-              src="/public/concepts/surve3.jpg"
-              alt="Plug and Play Setup"
+            <ImageWithFallback
+              src="/concepts/surve3.jpg"
+              alt="Door Security"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
           </div>
@@ -149,9 +150,9 @@ function Survillance() {
 
           {/* Image */}
           <div className="flex justify-center md:justify-end">
-            <img
-              src="/public/concepts/surve4.jpg"
-              alt="Perfect Mood"
+            <ImageWithFallback
+              src="/concepts/surve4.jpg"
+              alt="Movement Monitoring"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
           </div>
@@ -161,9 +162,9 @@ function Survillance() {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Image */}
           <div className="flex justify-center">
-            <img
-              src="/public/concepts/surve5.jpg"
-              alt="Plug and Play Setup"
+            <ImageWithFallback
+              src="/concepts/surve5.jpg"
+              alt="Camera Network"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
           </div>

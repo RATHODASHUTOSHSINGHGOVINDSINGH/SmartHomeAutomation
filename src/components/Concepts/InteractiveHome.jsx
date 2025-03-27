@@ -1,13 +1,14 @@
 import React from 'react'
 import { FaMicrophone, FaMusic, FaGlobe } from 'react-icons/fa';
+import ImageWithFallback from '../ImageErrorBoundary'
 
 function InteractiveHome() {
   return (
-    <div className="bg-white text-gray-800">
+    <div className="bg-white text-gray-800 pt-16">
     {/* Hero Section */}
     <section
      className="relative flex items-center justify-center h-[60vh] md:h-[80vh] bg-center bg-cover bg-no-repeat"
-      style={{ backgroundImage: 'url("/public/concepts/home1.jpg")' }}
+      style={{ backgroundImage: 'url("/concepts/home1.jpg")' }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       <div className="relative z-10 text-center max-w-2xl mx-auto px-4">
@@ -55,12 +56,20 @@ function InteractiveHome() {
 
         {/* Device and Apps Section */}
         <div className="relative">
-          <img src="/public/concepts/home2.jpg" className="w-150 mx-auto" />
+          <ImageWithFallback 
+            src="/concepts/home2.jpg" 
+            alt="Interactive home" 
+            className="w-full mx-auto rounded-lg shadow-md" 
+          />
         </div>
       </section>
       
       <section className="grid md:grid-cols-2 gap-8 items-center mb-12">
-        <img src="/public/concepts/home3.jpg" alt="Couple Cooking" className="w-full rounded-lg" />
+        <ImageWithFallback 
+          src="/concepts/home3.jpg" 
+          alt="Couple Cooking" 
+          className="w-full rounded-lg" 
+        />
         <div>
           <h1 className="text-4xl font-bold mb-4">Always your Companion at any time of the day</h1>
           <p className="text-gray-600 mb-4">With the interactive voice control, you can talk to Amazon Echo just like another member of your home. Spend your recreational time by listening to your favourite music stations or playing your favourite music from your smartphone.</p>
@@ -75,11 +84,19 @@ function InteractiveHome() {
           <p className="text-gray-600 mb-4">The Amazon Echo comes with built-in seven microphones under the top ring that come with beam-forming and enhanced noise cancellation technologies.</p>
           <p className="text-gray-600">The far-field voice recognition technology helps Echo to listen to your commands even when the music is playing.</p>
         </div>
-        <img src="/public/concepts/home4.jpg" alt="Voice Recognition Visualization" className="w-full rounded-lg" />
+        <ImageWithFallback 
+          src="/concepts/home4.jpg" 
+          alt="Voice Recognition Visualization" 
+          className="w-full rounded-lg" 
+        />
       </section>
 
       <section className="grid md:grid-cols-2 gap-8 mt-5 items-center mb-12">
-        <img src="/public/concepts/home5.jpg" alt="Couple Cooking" className="w-full rounded-lg" />
+        <ImageWithFallback 
+          src="/concepts/home5.jpg" 
+          alt="Smart Home Control" 
+          className="w-full rounded-lg" 
+        />
         <div>
           <h1 className="text-4xl font-bold mb-4">Control Your Smart Home</h1>
           <p className="text-gray-600 mb-4">Take your Home Automation experience to a whole new level with the Echo. Amazon Echo adds the interactive and responsive feature to your hoe automation wherein you can actually to the devices in the home and get things done.</p>

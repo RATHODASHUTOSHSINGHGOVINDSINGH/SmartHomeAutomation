@@ -1,6 +1,6 @@
-
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import ImageWithFallback from "./ImageErrorBoundary";
 
 const concepts = [
   { image: "/automate/1.jpg", link: "/lighting" },
@@ -61,7 +61,7 @@ const Automate = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full min-h-screen bg-gray-100 py-10">
+    <div className="w-full min-h-screen bg-gray-100 py-10 pt-20">
       {/* Header Section */}
       <div className="bg-teal-500 text-white text-center py-10">
         <h1 className="text-3xl font-bold">Home Automation Concepts</h1>
@@ -78,7 +78,7 @@ const Automate = () => {
             className="relative cursor-pointer transition-transform transform hover:scale-105"
             onClick={() => navigate(concept.link)}
           >
-            <img
+            <ImageWithFallback
               src={concept.image}
               alt="Home Automation"
               className="w-full h-48 object-cover rounded-lg shadow-md"

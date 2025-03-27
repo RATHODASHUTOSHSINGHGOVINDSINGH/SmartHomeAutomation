@@ -1,12 +1,13 @@
 import React from "react";
+import ImageWithFallback from "../ImageErrorBoundary";
 
 const Lighting = () => {
   return (
-    <div className="bg-white text-gray-800">
+    <div className="bg-white text-gray-800 pt-16">
       {/* Hero Section */}
       <section
         className="relative flex items-center justify-center h-[60vh] md:h-[80vh] bg-center bg-cover bg-no-repeat"
-        style={{ backgroundImage: 'url("/public/concepts/automate1.jpg")' }}
+        style={{ backgroundImage: 'url("/concepts/automate1.jpg")' }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative z-10 text-center max-w-2xl mx-auto px-4">
@@ -62,8 +63,8 @@ const Lighting = () => {
 
           {/* Image */}
           <div className="flex justify-center md:justify-end">
-            <img
-              src="/public/concepts/automate2.jpg"
+            <ImageWithFallback
+              src="/concepts/automate2.jpg"
               alt="Ambient lighting"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
@@ -93,16 +94,17 @@ const Lighting = () => {
               <p className="text-lg">Energy Savings</p>
             </div>
           </div>
-          </div>
-</section>
-          {/* Control from Smartphone */}
-          <section className="bg-white-800 text-black py-16">
+        </div>
+      </section>
+
+      {/* Control from Smartphone */}
+      <section className="bg-white-800 text-black py-16">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Image */}
           <div className="flex justify-center">
-            <img
-              src="/public/concepts/automate3.jpg"
-              alt="Plug and Play Setup"
+            <ImageWithFallback
+              src="/concepts/automate3.jpg"
+              alt="Smartphone Control"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
           </div>
@@ -136,8 +138,8 @@ const Lighting = () => {
 
           {/* Image */}
           <div className="flex justify-center md:justify-end">
-            <img
-              src="/public/concepts/automate4.jpg"
+            <ImageWithFallback
+              src="/concepts/automate4.jpg"
               alt="Perfect Mood"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
@@ -150,8 +152,8 @@ const Lighting = () => {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Image */}
           <div className="flex justify-center">
-            <img
-              src="/public/concepts/automate5.jpg"
+            <ImageWithFallback
+              src="/concepts/automate5.jpg"
               alt="Plug and Play Setup"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />

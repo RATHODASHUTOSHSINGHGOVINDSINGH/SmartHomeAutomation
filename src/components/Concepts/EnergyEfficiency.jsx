@@ -1,12 +1,13 @@
 import React from 'react'
+import ImageWithFallback from '../ImageErrorBoundary'
 
 function EnergyEfficiency() {
   return (
-    <div className="bg-white text-gray-800">
+    <div className="bg-white text-gray-800 pt-16">
     {/* Hero Section */}
     <section
       className="relative flex items-center justify-center h-[60vh] md:h-[80vh] bg-center bg-cover bg-no-repeat"
-      style={{ backgroundImage: 'url("/public/concepts/energy1.jpg")' }}
+      style={{ backgroundImage: 'url("/concepts/energy1.jpg")' }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-30"></div>
       <div className="relative z-10 text-center max-w-3xl px-4">
@@ -19,9 +20,9 @@ function EnergyEfficiency() {
       </div>
     </section>
 
-    <section className="mb-12">
-        <h2 className="text-4xl font-semibold mb-6 mt-10">Energy Management turns Simpler</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <section className="mb-12 px-4">
+        <h2 className="text-4xl font-semibold mb-6 mt-10 text-center">Energy Management turns Simpler</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <div>
             <div className="flex items-start mb-6">
               <span className="text-3xl mr-4">📱</span>
@@ -46,14 +47,15 @@ function EnergyEfficiency() {
             </div>
           </div>
           <div>
-            <img 
-              src="/public/concepts/energy2.jpg" 
+            <ImageWithFallback 
+              src="/concepts/energy2.jpg" 
               alt="Smart Home Illustration" 
-              className=" w-full rounded-lg shadow-lg" 
+              className="w-full rounded-lg shadow-lg" 
             />
           </div>
         </div>
       </section>
+      
       <section className=" bg-white">
       <div className="p-6 bg-gray-100 min-h-screen">
       <div className="text-center text-2xl font-bold mb-8">
@@ -102,9 +104,9 @@ function EnergyEfficiency() {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Image */}
           <div className="flex justify-center">
-            <img
-              src="/public/concepts/energy3.jpg"
-              alt="Plug and Play Setup"
+            <ImageWithFallback
+              src="/concepts/energy3.jpg"
+              alt="Energy Usage Analysis"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
           </div>
@@ -134,9 +136,9 @@ function EnergyEfficiency() {
 
           {/* Image */}
           <div className="flex justify-center md:justify-end">
-            <img
-              src="/public/concepts/energy4.jpg"
-              alt="Perfect Mood"
+            <ImageWithFallback
+              src="/concepts/energy4.jpg"
+              alt="Scheduling Events"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
           </div>
@@ -147,9 +149,9 @@ function EnergyEfficiency() {
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Image */}
           <div className="flex justify-center">
-            <img
-              src="/public/concepts/energy5.jpg"
-              alt="Plug and Play Setup"
+            <ImageWithFallback
+              src="/concepts/energy5.jpg"
+              alt="Learning Usage Patterns"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
           </div>

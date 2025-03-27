@@ -1,13 +1,14 @@
 import React from "react";
-// import { Card, CardContent } from "@/components/ui/card";
 import { FaBell, FaVideo, FaHome } from "react-icons/fa";
+import ImageWithFallback from "../ImageErrorBoundary";
+
 const SecurityPage = () => {
   return (
-    <div className="bg-white text-gray-800">
+    <div className="bg-white text-gray-800 pt-16">
       {/* Hero Section */}
       <section
         className="relative flex items-center justify-center h-[60vh] md:h-[80vh] bg-center bg-cover bg-no-repeat"
-        style={{ backgroundImage: 'url("/public/concepts/security1.jpg")' }}
+        style={{ backgroundImage: 'url("/concepts/security1.jpg")' }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-30"></div>
         <div className="relative z-10 text-center max-w-3xl px-4">
@@ -123,9 +124,9 @@ const SecurityPage = () => {
 
           {/* Image */}
           <div className="flex justify-center md:justify-end">
-            <img
-              src="/public/concepts/security2.jpg"
-              alt="Perfect Mood"
+            <ImageWithFallback
+              src="/concepts/security2.jpg"
+              alt="Door Security"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
           </div>
@@ -145,9 +146,9 @@ const SecurityPage = () => {
 
           {/* Image */}
           <div className="flex justify-center md:justify-end">
-            <img
-              src="/public/concepts/security3.jpg"
-              alt="Perfect Mood"
+            <ImageWithFallback
+              src="/concepts/security3.jpg"
+              alt="24/7 Monitoring"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
           </div>
@@ -166,9 +167,9 @@ const SecurityPage = () => {
 
           {/* Image */}
           <div className="flex justify-center md:justify-end">
-            <img
-              src="/public/concepts/security4.jpg"
-              alt="Perfect Mood"
+            <ImageWithFallback
+              src="/concepts/security4.jpg"
+              alt="Security Sensors"
               className="rounded-lg shadow-md w-full md:w-4/5"
             />
           </div>

@@ -1,4 +1,4 @@
- # Portfolio Project
+# Portfolio Project
 This is my portfolio website built using React.js and Vite.
 
 ## Installation
@@ -102,6 +102,10 @@ Create a `vercel.json` file in the root directory with the following content:
   ]
 }
 ```
+
+## Image Assets Structure
+
+Images should be placed in the `public` directory with the following structure:
 
 ### Run Locally
 To start the development server:
